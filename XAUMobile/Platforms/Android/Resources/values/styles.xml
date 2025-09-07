@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+	<style name="Maui.MainTheme" parent="Theme.MaterialComponents.DayNight">
+		<item name="android:colorActivatedHighlight">@android:color/transparent</item>
+		<!-- For now, transparent bg color for highlighted listview items. Disabled ugly orange color. github.com/dotnet/maui/issues/13812 -->
+	</style>
+</resources>

@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XAUMobile.WelcomePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:XAUMobile.Controls"
+    xmlns:local="clr-namespace:XAUMobile"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    Shell.NavBarIsVisible="false">
+
+    <ScrollView>
+        <StackLayout Padding="20,0" Spacing="10">
+            <Image
+                Margin="0,20,0,20"
+                Aspect="AspectFit"
+                HeightRequest="100"
+                SemanticProperties.Description="XAUMobile"
+                Source="xaumobile2.png" />
+
+            <Label
+                Margin="0,10,0,10"
+                FontSize="14"
+                HorizontalOptions="CenterAndExpand"
+                HorizontalTextAlignment="Center"
+                Text="{local:Translate WelcomePageFollowingTerms}"
+                TextColor="White" />
+
+            <BoxView HeightRequest="1" Color="White" />
+
+            <!--  Terms and Conditions  -->
+            <Label
+                Margin="0,5"
+                FontSize="12"
+                HorizontalOptions="CenterAndExpand"
+                HorizontalTextAlignment="Center"
+                Text="{local:Translate WelcomePageTerms1}"
+                TextColor="{DynamicResource Secondary}" />
+
+            <Label
+                Margin="0,5"
+                FontSize="12"
+                HorizontalOptions="CenterAndExpand"
+                HorizontalTextAlignment="Center"
+                Text="{local:Translate WelcomePageTerms2}"
+                TextColor="{DynamicResource Secondary}" />
+
+            <Label
+                Margin="0,5"
+                FontSize="12"
+                HorizontalOptions="CenterAndExpand"
+                HorizontalTextAlignment="Center"
+                Text="{local:Translate WelcomePageTerms3}"
+                TextColor="{DynamicResource Secondary}" />
+
+            <Label
+                Margin="0,5"
+                FontSize="12"
+                HorizontalOptions="CenterAndExpand"
+                HorizontalTextAlignment="Center"
+                Text="{local:Translate WelcomePageTerms4}"
+                TextColor="{DynamicResource Secondary}" />
+
+            <Label
+                Margin="0,5"
+                FontSize="12"
+                HorizontalOptions="CenterAndExpand"
+                HorizontalTextAlignment="Center"
+                Text="{local:Translate WelcomePageTerms5}"
+                TextColor="{DynamicResource Secondary}" />
+
+            <Label
+                Margin="0,5"
+                FontSize="12"
+                HorizontalOptions="CenterAndExpand"
+                HorizontalTextAlignment="Center"
+                Text="{local:Translate WelcomePageTerms6}"
+                TextColor="{DynamicResource Secondary}" />
+
+            <!--  CheckBox for agreement  -->
+            <StackLayout
+                Margin="0,10"
+                HorizontalOptions="Center"
+                Orientation="Horizontal"
+                VerticalOptions="Center">
+                <CheckBox
+                    x:Name="TermsCheckBox"
+                    VerticalOptions="Center"
+                    Color="{DynamicResource Primary}" />
+                <Label
+                    FontSize="12"
+                    HorizontalOptions="StartAndExpand"
+                    LineBreakMode="WordWrap"
+                    MaxLines="2"
+                    Text="{local:Translate WelcomePageAgreeToc}"
+                    TextColor="{DynamicResource Primary}"
+                    VerticalOptions="Center" />
+            </StackLayout>
+
+            <Button
+                BackgroundColor="{DynamicResource Primary}"
+                Clicked="OnAcceptButtonClicked"
+                HorizontalOptions="Center"
+                IsEnabled="{Binding Source={x:Reference TermsCheckBox}, Path=IsChecked}"
+                Text="{local:Translate Accept}"
+                TextColor="White"
+                VerticalOptions="EndAndExpand" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

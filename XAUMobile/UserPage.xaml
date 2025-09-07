@@ -1,0 +1,81 @@
+﻿<ContentPage
+    x:Class="XAUMobile.UserPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:XAUMobile.Controls"
+    xmlns:local="clr-namespace:XAUMobile"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    Shell.NavBarIsVisible="true">
+    <AbsoluteLayout>
+
+        <ScrollView AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+            <VerticalStackLayout Padding="30" Spacing="20">
+                <Frame
+                    BackgroundColor="Transparent"
+                    CornerRadius="50"
+                    HasShadow="False"
+                    HeightRequest="100"
+                    HorizontalOptions="Center"
+                    WidthRequest="100">
+                    <Image
+                        x:Name="avatarImage"
+                        Aspect="AspectFill"
+                        HeightRequest="100"
+                        WidthRequest="100" />
+                </Frame>
+                <Label
+                    x:Name="labelGamertag"
+                    FontSize="Large"
+                    HorizontalOptions="Center"
+                    Text="{local:Translate Unknown}"
+                    TextColor="{DynamicResource Primary}" />
+                <Label
+                    x:Name="labelGamerScore"
+                    FontSize="Small"
+                    HorizontalOptions="Center"
+                    Text="{local:Translate Unknown}"
+                    TextColor="{DynamicResource Primary}" />
+                <Label
+                    x:Name="labelXuid"
+                    FontSize="Small"
+                    HorizontalOptions="Center"
+                    Text="{local:Translate Unknown}"
+                    TextColor="{DynamicResource Primary}" />
+                <Label
+                    x:Name="labelXboxOneRep"
+                    Text="{local:Translate Unknown}"
+                    TextColor="{DynamicResource Secondary}" />
+                <Label
+                    x:Name="labelPresenceState"
+                    Text="{local:Translate Unknown}"
+                    TextColor="{DynamicResource Secondary}" />
+                <Label
+                    x:Name="labelPresenceText"
+                    Text="{local:Translate Unknown}"
+                    TextColor="{DynamicResource Secondary}" />
+                <Label
+                    x:Name="labelDevice"
+                    Text="{local:Translate Unknown}"
+                    TextColor="{DynamicResource Secondary}" />
+                <Label
+                    x:Name="labelFollowerCount"
+                    Text="{local:Translate Unknown}"
+                    TextColor="{DynamicResource Secondary}" />
+                <Label
+                    x:Name="labelFollowingCount"
+                    Text="{local:Translate Unknown}"
+                    TextColor="{DynamicResource Secondary}" />
+                <Button
+                    BackgroundColor="{DynamicResource Primary}"
+                    Clicked="OnRefreshClicked"
+                    Text="{local:Translate Refresh}"
+                    TextColor="White" />
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <controls:CallToAction
+            x:Name="CallToActionControl"
+            AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+            AbsoluteLayout.LayoutFlags="All" />
+    </AbsoluteLayout>
+</ContentPage>

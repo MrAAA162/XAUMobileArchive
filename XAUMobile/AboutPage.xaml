@@ -1,0 +1,490 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XAUMobile.AboutPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:XAUMobile.Controls"
+    xmlns:local="clr-namespace:XAUMobile"
+    Shell.NavBarIsVisible="true"
+    Shell.TabBarIsVisible="false">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="20" Spacing="10">
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="20"
+                    HorizontalOptions="Center"
+                    Text="About Us"
+                    TextColor="{DynamicResource Primary}" />
+
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="14"
+                    HorizontalOptions="Center"
+                    Text="Thanks for using XAU Mobile! This application was made possible thanks to these people. Make sure you thank them for their contribution and releasing it for FREE."
+                    TextColor="{DynamicResource Primary}" />
+
+                <!--  me  -->
+                <Frame
+                    Margin="2,4"
+                    Padding="16"
+                    BackgroundColor="{DynamicResource CardBg}"
+                    BorderColor="Transparent"
+                    CornerRadius="8"
+                    HasShadow="True">
+                    <StackLayout Orientation="Horizontal">
+                        <Image
+                            Aspect="AspectFill"
+                            HeightRequest="50"
+                            Source="meowpurrr.png"
+                            WidthRequest="50" />
+                        <StackLayout
+                            Margin="10,0,0,0"
+                            HorizontalOptions="StartAndExpand"
+                            VerticalOptions="Center">
+                            <Label
+                                FontAttributes="Bold"
+                                FontSize="16"
+                                Text="AAA162"
+                                TextColor="{DynamicResource Primary}" />
+                            <Label
+                                FontSize="12"
+                                HorizontalOptions="StartAndExpand"
+                                LineBreakMode="WordWrap"
+                                Text="Developer &amp; Creator of XAU Mobile"
+                                TextColor="White" />
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <!--  Draff  -->
+                <Frame
+                    Margin="2,4"
+                    Padding="16"
+                    BackgroundColor="{DynamicResource CardBg}"
+                    BorderColor="Transparent"
+                    CornerRadius="8"
+                    HasShadow="True">
+                    <StackLayout Orientation="Horizontal">
+                        <Image
+                            Aspect="AspectFill"
+                            HeightRequest="50"
+                            Source="draff.png"
+                            WidthRequest="50" />
+                        <StackLayout
+                            Margin="10,0,0,0"
+                            HorizontalOptions="StartAndExpand"
+                            VerticalOptions="Center">
+                            <Label
+                                FontAttributes="Bold"
+                                FontSize="16"
+                                Text="Draff"
+                                TextColor="{DynamicResource Primary}" />
+                            <Label
+                                FontSize="12"
+                                HorizontalOptions="StartAndExpand"
+                                LineBreakMode="WordWrap"
+                                Text="Releasing XAU PC"
+                                TextColor="White" />
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <!--  Fisko  -->
+                <Frame
+                    Margin="2,4"
+                    Padding="16"
+                    BackgroundColor="{DynamicResource CardBg}"
+                    BorderColor="Transparent"
+                    CornerRadius="8"
+                    HasShadow="True">
+                    <StackLayout Orientation="Horizontal">
+                        <Image
+                            Aspect="AspectFill"
+                            HeightRequest="50"
+                            Source="fisko.png"
+                            WidthRequest="50" />
+                        <StackLayout
+                            Margin="10,0,0,0"
+                            HorizontalOptions="StartAndExpand"
+                            VerticalOptions="Center">
+                            <Label
+                                FontAttributes="Bold"
+                                FontSize="16"
+                                Text="Fisko"
+                                TextColor="{DynamicResource Primary}" />
+                            <Label
+                                FontSize="12"
+                                HorizontalOptions="StartAndExpand"
+                                LineBreakMode="WordWrap"
+                                Text="Assistance with many things"
+                                TextColor="White" />
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <!--  stelemanuele77  -->
+                <Frame
+                    Margin="2,4"
+                    Padding="16"
+                    BackgroundColor="{DynamicResource CardBg}"
+                    BorderColor="Transparent"
+                    CornerRadius="8"
+                    HasShadow="True">
+                    <StackLayout Orientation="Horizontal">
+                        <Image
+                            Aspect="AspectFill"
+                            HeightRequest="50"
+                            Source="stelemanuele77.png"
+                            WidthRequest="50" />
+                        <StackLayout
+                            Margin="10,0,0,0"
+                            HorizontalOptions="StartAndExpand"
+                            VerticalOptions="Center">
+                            <Label
+                                FontAttributes="Bold"
+                                FontSize="16"
+                                Text="Stelemanuele77"
+                                TextColor="{DynamicResource Primary}" />
+                            <Label
+                                FontSize="12"
+                                HorizontalOptions="StartAndExpand"
+                                LineBreakMode="WordWrap"
+                                Text="Xbox login code"
+                                TextColor="White" />
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <!--  Translators Card  -->
+                <Frame
+                    Margin="2,4"
+                    Padding="16"
+                    BackgroundColor="{DynamicResource CardBg}"
+                    BorderColor="Transparent"
+                    CornerRadius="8"
+                    HasShadow="True">
+                    <StackLayout Orientation="Vertical">
+                        <StackLayout Orientation="Horizontal">
+                            <Image
+                                Aspect="AspectFill"
+                                HeightRequest="50"
+                                Source="translators50.png"
+                                WidthRequest="50" />
+                            <StackLayout
+                                Margin="10,0,0,0"
+                                HorizontalOptions="StartAndExpand"
+                                VerticalOptions="Center">
+                                <Label
+                                    FontAttributes="Bold"
+                                    FontSize="16"
+                                    Text="XAU Mobile Translators"
+                                    TextColor="{DynamicResource Primary}" />
+                                <Label
+                                    FontSize="12"
+                                    HorizontalOptions="StartAndExpand"
+                                    LineBreakMode="WordWrap"
+                                    Text="Thanks to these individuals for helping translate XAU Mobile into other languages:"
+                                    TextColor="White" />
+                            </StackLayout>
+                        </StackLayout>
+
+                        <ScrollView
+                            Margin="0,10,0,0"
+                            HorizontalOptions="FillAndExpand"
+                            Orientation="Horizontal">
+                            <StackLayout Orientation="Horizontal" Spacing="10">
+                                <StackLayout
+                                    HorizontalOptions="Start"
+                                    Orientation="Vertical"
+                                    VerticalOptions="Center"
+                                    WidthRequest="70">
+                                    <Frame
+                                        CornerRadius="25"
+                                        HasShadow="False"
+                                        HeightRequest="50"
+                                        HorizontalOptions="Center"
+                                        VerticalOptions="Center"
+                                        WidthRequest="50">
+                                        <Image
+                                            Aspect="AspectFill"
+                                            HeightRequest="50"
+                                            Source="hellalex92.png"
+                                            WidthRequest="50" />
+                                    </Frame>
+                                    <Label
+                                        FontAttributes="Bold"
+                                        FontSize="10"
+                                        HorizontalOptions="Center"
+                                        Text="HellAlex92"
+                                        TextColor="{DynamicResource Primary}" />
+                                    <Label
+                                        FontSize="20"
+                                        HorizontalOptions="Center"
+                                        Text="🇩🇪"
+                                        TextColor="White" />
+                                </StackLayout>
+
+                                <StackLayout
+                                    HorizontalOptions="Start"
+                                    Orientation="Vertical"
+                                    VerticalOptions="Center"
+                                    WidthRequest="70">
+                                    <Frame
+                                        CornerRadius="25"
+                                        HasShadow="False"
+                                        HeightRequest="50"
+                                        HorizontalOptions="Center"
+                                        VerticalOptions="Center"
+                                        WidthRequest="50">
+                                        <Image
+                                            Aspect="AspectFill"
+                                            HeightRequest="50"
+                                            Source="merika.png"
+                                            WidthRequest="50" />
+                                    </Frame>
+                                    <Label
+                                        FontAttributes="Bold"
+                                        FontSize="10"
+                                        HorizontalOptions="Center"
+                                        Text="Merika"
+                                        TextColor="{DynamicResource Primary}" />
+                                    <Label
+                                        FontSize="20"
+                                        HorizontalOptions="Center"
+                                        Text="🇵🇱"
+                                        TextColor="White" />
+                                </StackLayout>
+
+                                <StackLayout
+                                    HorizontalOptions="Start"
+                                    Orientation="Vertical"
+                                    VerticalOptions="Center"
+                                    WidthRequest="70">
+                                    <Frame
+                                        CornerRadius="25"
+                                        HasShadow="False"
+                                        HeightRequest="50"
+                                        HorizontalOptions="Center"
+                                        VerticalOptions="Center"
+                                        WidthRequest="50">
+                                        <Image
+                                            Aspect="AspectFill"
+                                            HeightRequest="50"
+                                            Source="asutermo.png"
+                                            WidthRequest="50" />
+                                    </Frame>
+                                    <Label
+                                        FontAttributes="Bold"
+                                        FontSize="10"
+                                        HorizontalOptions="Center"
+                                        Text="Asutermo"
+                                        TextColor="{DynamicResource Primary}" />
+                                    <Label
+                                        FontSize="20"
+                                        HorizontalOptions="Center"
+                                        Text="🇪🇸"
+                                        TextColor="White" />
+                                </StackLayout>
+
+                                <StackLayout
+                                    HorizontalOptions="Start"
+                                    Orientation="Vertical"
+                                    VerticalOptions="Center"
+                                    WidthRequest="70">
+                                    <Frame
+                                        CornerRadius="25"
+                                        HasShadow="False"
+                                        HeightRequest="50"
+                                        HorizontalOptions="Center"
+                                        VerticalOptions="Center"
+                                        WidthRequest="50">
+                                        <Image
+                                            Aspect="AspectFill"
+                                            HeightRequest="50"
+                                            Source="nacliaf.png"
+                                            WidthRequest="50" />
+                                    </Frame>
+                                    <Label
+                                        FontAttributes="Bold"
+                                        FontSize="10"
+                                        HorizontalOptions="Center"
+                                        Text="NaCLyAF"
+                                        TextColor="{DynamicResource Primary}" />
+                                    <Label
+                                        FontSize="20"
+                                        HorizontalOptions="Center"
+                                        Text="🇵🇹"
+                                        TextColor="White" />
+                                </StackLayout>
+
+                                <StackLayout
+                                    HorizontalOptions="Start"
+                                    Orientation="Vertical"
+                                    VerticalOptions="Center"
+                                    WidthRequest="70">
+                                    <Frame
+                                        CornerRadius="25"
+                                        HasShadow="False"
+                                        HeightRequest="50"
+                                        HorizontalOptions="Center"
+                                        VerticalOptions="Center"
+                                        WidthRequest="50">
+                                        <Image
+                                            Aspect="AspectFill"
+                                            HeightRequest="50"
+                                            Source="aeromorto.png"
+                                            WidthRequest="50" />
+                                    </Frame>
+                                    <Label
+                                        FontAttributes="Bold"
+                                        FontSize="10"
+                                        HorizontalOptions="Center"
+                                        Text="Aeromorto"
+                                        TextColor="{DynamicResource Primary}" />
+                                    <Label
+                                        FontSize="20"
+                                        HorizontalOptions="Center"
+                                        Text="🇧🇷"
+                                        TextColor="White" />
+                                </StackLayout>
+
+                                <!--  add more profiles here  -->
+                            </StackLayout>
+                        </ScrollView>
+
+                        <Label
+                            Margin="0,5,0,0"
+                            FontSize="10"
+                            HorizontalOptions="Center"
+                            Text="(Swipe to see all translators)"
+                            TextColor="White" />
+                    </StackLayout>
+                </Frame>
+
+                <!--  Contributor Card  -->
+                <Frame
+                    Margin="2,4"
+                    Padding="16"
+                    BackgroundColor="{DynamicResource CardBg}"
+                    BorderColor="Transparent"
+                    CornerRadius="8"
+                    HasShadow="True">
+                    <StackLayout Orientation="Horizontal">
+                        <Image
+                            Aspect="AspectFill"
+                            HeightRequest="50"
+                            Source="cirno.png"
+                            WidthRequest="50" />
+                        <StackLayout
+                            Margin="10,0,0,0"
+                            HorizontalOptions="StartAndExpand"
+                            VerticalOptions="Center">
+                            <Label
+                                FontAttributes="Bold"
+                                FontSize="16"
+                                Text="XAU Contributors"
+                                TextColor="{DynamicResource Primary}" />
+                            <Label
+                                FontSize="12"
+                                HorizontalOptions="StartAndExpand"
+                                LineBreakMode="WordWrap"
+                                Text="Every XAU contributor who helped create the desktop version of XAU and inspired me to write the mobile version"
+                                TextColor="White" />
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <!--  Discord Server Card  -->
+                <Frame
+                    Margin="2,4"
+                    Padding="16"
+                    BackgroundColor="{DynamicResource CardBg}"
+                    BorderColor="Transparent"
+                    CornerRadius="8"
+                    HasShadow="True">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnDiscordTapped" />
+                    </Frame.GestureRecognizers>
+                    <StackLayout Orientation="Horizontal">
+                        <Image
+                            Aspect="AspectFill"
+                            HeightRequest="50"
+                            Source="discordic50.png"
+                            WidthRequest="50" />
+                        <StackLayout
+                            Margin="10,0,0,0"
+                            HorizontalOptions="StartAndExpand"
+                            VerticalOptions="Center">
+                            <Label
+                                FontAttributes="Bold"
+                                FontSize="16"
+                                Text="Discord Server"
+                                TextColor="{DynamicResource Primary}" />
+                            <Label
+                                FontSize="12"
+                                HorizontalOptions="StartAndExpand"
+                                LineBreakMode="WordWrap"
+                                Text="Press here to join the Discord if you have any questions or feature suggestions. You can also find other cute people in there and make friends"
+                                TextColor="White" />
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <!--  GitHub Button  -->
+                <Frame
+                    Margin="2,4"
+                    Padding="16"
+                    BackgroundColor="{DynamicResource CardBg}"
+                    BorderColor="Transparent"
+                    CornerRadius="8"
+                    HasShadow="True">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnGithubTapped" />
+                    </Frame.GestureRecognizers>
+                    <StackLayout Orientation="Horizontal">
+                        <Image
+                            Aspect="AspectFill"
+                            HeightRequest="50"
+                            Source="githubic50.png"
+                            WidthRequest="50" />
+                        <StackLayout
+                            Margin="10,0,0,0"
+                            HorizontalOptions="StartAndExpand"
+                            VerticalOptions="Center">
+                            <Label
+                                FontAttributes="Bold"
+                                FontSize="16"
+                                Text="Github Repo"
+                                TextColor="{DynamicResource Primary}" />
+                            <Label
+                                FontSize="12"
+                                HorizontalOptions="StartAndExpand"
+                                LineBreakMode="WordWrap"
+                                Text="You will find the latest release here if you prefer not to use the in-app updater. Press here to go to the Github page."
+                                TextColor="White" />
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <!--  Copyright and Legal Information  -->
+                <Label
+                    Margin="0,20,0,0"
+                    FontAttributes="Bold"
+                    FontSize="10"
+                    HorizontalOptions="Center"
+                    Text="© 2024-2025 XAU MOBILE. All rights reserved."
+                    TextColor="White"
+                    VerticalOptions="End" />
+
+                <Label
+                    FontSize="10"
+                    HorizontalOptions="Center"
+                    LineBreakMode="WordWrap"
+                    Text="You may not redistribute or resell this software without written permission. All product names, trademarks, and registered trademarks are property of their respective owners. All company, product, and service names used in this app are for identification purposes only. Use of these names, trademarks, and brands does not imply endorsement or partnership."
+                    TextColor="White" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

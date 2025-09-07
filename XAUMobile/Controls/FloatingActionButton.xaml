@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView
+    x:Class="XAUMobile.Controls.FloatingActionButton"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:XAUMobile.Controls">
+    <ContentView.Content>
+        <AbsoluteLayout>
+
+            <Frame
+                Margin="16"
+                Background="Transparent"
+                BorderColor="Transparent"
+                CornerRadius="20"
+                HeightRequest="60"
+                HorizontalOptions="End"
+                VerticalOptions="End"
+                WidthRequest="60">
+                <ImageButton
+                    x:Name="MainFabButton"
+                    Clicked="OnFabClicked"
+                    HeightRequest="60"
+                    Source="clippy.png"
+                    WidthRequest="60" />
+            </Frame>
+
+            <ImageButton
+                x:Name="SettingsButton"
+                AbsoluteLayout.LayoutBounds="1, 0.72, AutoSize, AutoSize"
+                AbsoluteLayout.LayoutFlags="PositionProportional"
+                BackgroundColor="Transparent"
+                Clicked="OnSettingsClicked"
+                HeightRequest="32"
+                IsVisible="False"
+                Source="settingsic50.png"
+                WidthRequest="32" />
+
+            <ImageButton
+                x:Name="AboutUsButton"
+                AbsoluteLayout.LayoutBounds="1, 1, AutoSize, AutoSize"
+                AbsoluteLayout.LayoutFlags="PositionProportional"
+                BackgroundColor="Transparent"
+                Clicked="OnAboutUsClicked"
+                HeightRequest="32"
+                IsVisible="False"
+                Source="aboutic50.png"
+                WidthRequest="32" />
+        </AbsoluteLayout>
+    </ContentView.Content>
+</ContentView>

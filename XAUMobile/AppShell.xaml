@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="XAUMobile.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:XAUMobile"
+    Title="XAUMobile"
+    Shell.FlyoutBehavior="Disabled">
+
+    <!--  see link below for more info on Shell and TabBar  -->
+    <!--  https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/shell/tabs?view=net-maui-8.0  -->
+
+    <Shell.ToolbarItems>
+
+        <ToolbarItem
+            x:Name="AnnouncementsItem"
+            Clicked="OnAnnouncementsItemClicked"
+            IconImageSource="noti.svg"
+            Order="Primary" />
+        <ToolbarItem
+            x:Name="SettingsItem"
+            Clicked="OnSettingsItemClicked"
+            Order="Secondary"
+            Priority="1"
+            Text="{local:Translate ToolBarMenuSettings}" />
+        <ToolbarItem
+            x:Name="AboutAppItem"
+            Clicked="OnAboutItemClicked"
+            Order="Secondary"
+            Priority="2"
+            Text="{local:Translate ToolBarMenuAboutXAU}" />
+        <ToolbarItem
+            x:Name="HelpItem"
+            Clicked="OnHelpItemClicked"
+            Order="Secondary"
+            Priority="3"
+            Text="{local:Translate ToolBarMenuDiscord}" />
+    </Shell.ToolbarItems>
+
+    <TabBar>
+        <Tab
+            Title="{local:Translate TabBarHome}"
+            Icon="homeic.png"
+            Route="MainPage">
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}" Shell.TabBarIsVisible="false" />
+        </Tab>
+        <Tab
+            Title="{local:Translate TabBarUser}"
+            Icon="useric.png"
+            Route="UserPage">
+            <ShellContent ContentTemplate="{DataTemplate local:UserPage}" />
+        </Tab>
+        <Tab
+            Title="{local:Translate TabBarGames}"
+            Icon="gamesic.png"
+            Route="GamesPage">
+            <ShellContent ContentTemplate="{DataTemplate local:GamesPage}" />
+        </Tab>
+        <Tab
+            Title="{local:Translate TabBarMisc}"
+            Icon="appic.png"
+            Route="SpoofPage">
+            <ShellContent Title="{local:Translate TabTitleSpoofGame}" ContentTemplate="{DataTemplate local:SpoofingPage}" />
+            <ShellContent Title="{local:Translate TabTitleStatsEditor}" ContentTemplate="{DataTemplate local:StatsPage}" />
+        </Tab>
+        <Tab
+            Title="{local:Translate TabBarSearch}"
+            Icon="searchic.png"
+            Route="SearchGamesPage">
+            <ShellContent Title="{local:Translate SearchTabGame}" ContentTemplate="{DataTemplate local:SearchGamesPage}" />
+            <ShellContent Title="{local:Translate SearchTabProductId}" ContentTemplate="{DataTemplate local:SearchProductPage}" />
+            <ShellContent Title="{local:Translate SearchTabGamertag}" ContentTemplate="{DataTemplate local:SearchGamertagPage}" />
+        </Tab>
+    </TabBar>
+
+    <ShellContent ContentTemplate="{DataTemplate local:AchievementsPage}" Route="AchievementsPage" />
+    <ShellContent ContentTemplate="{DataTemplate local:AnnouncementsPage}" Route="AnnouncementsPage" />
+    <ShellContent ContentTemplate="{DataTemplate local:LoginPage}" Route="LoginPage" />
+</Shell>

@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XAUMobile.SpoofingPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:XAUMobile.Controls"
+    xmlns:local="clr-namespace:XAUMobile"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    Title=""
+    Shell.NavBarIsVisible="true">
+
+    <AbsoluteLayout>
+
+        <ScrollView AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+            <StackLayout Padding="15,5" Spacing="10">
+
+                <Frame
+                    BackgroundColor="Transparent"
+                    BorderColor="Transparent"
+                    HasShadow="False"
+                    HeightRequest="160"
+                    HorizontalOptions="Center"
+                    WidthRequest="160">
+                    <Image
+                        Aspect="AspectFill"
+                        HeightRequest="160"
+                        Source="{Binding GameImage}"
+                        WidthRequest="160" />
+                </Frame>
+
+                <Label Text="{Binding GameName}" TextColor="{DynamicResource Secondary}" />
+                <Label Text="{Binding GameTitleID}" TextColor="{DynamicResource Secondary}" />
+                <Label Text="{Binding GamePFN}" TextColor="{DynamicResource Secondary}" />
+                <Label Text="{Binding GameType}" TextColor="{DynamicResource Secondary}" />
+                <Label Text="{Binding GameGamepass}" TextColor="{DynamicResource Secondary}" />
+                <Label Text="{Binding GameDevices}" TextColor="{DynamicResource Secondary}" />
+                <Label Text="{Binding GameGamerscore}" TextColor="{DynamicResource Secondary}" />
+                <Label Text="{Binding GameTime}" TextColor="{DynamicResource Secondary}" />
+                <Label
+                    FontSize="Large"
+                    HorizontalOptions="Center"
+                    Text="{Binding TimerText}"
+                    TextColor="{DynamicResource Secondary}"
+                    VerticalOptions="Center" />
+
+                <Entry
+                    x:Name="EntryTitleId"
+                    Placeholder="Enter Title ID"
+                    Text="{Binding NewSpoofingID, Mode=TwoWay}" />
+                <Button
+                    BackgroundColor="{DynamicResource Primary}"
+                    Command="{Binding StartSpoofingCommand}"
+                    Text="{Binding SpoofingButtonText}"
+                    TextColor="White" />
+
+                <Label
+                    FontSize="12"
+                    HorizontalTextAlignment="Center"
+                    Text="{local:Translate SpoofingWarning}"
+                    TextColor="{DynamicResource Primary}" />
+
+                <Label Text="{local:Translate SpoofingUserAgent}" />
+
+                <Picker
+                    Title="{local:Translate SpoofingUserAgent}"
+                    ItemsSource="{Binding UserAgents}"
+                    SelectedItem="{Binding SelectedUserAgent}"
+                    TextColor="{DynamicResource Secondary}" />
+            </StackLayout>
+        </ScrollView>
+
+        <controls:CallToAction
+            x:Name="CallToActionControl"
+            AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+            AbsoluteLayout.LayoutFlags="All" />
+    </AbsoluteLayout>
+</ContentPage>

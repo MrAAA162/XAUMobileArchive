@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XAUMobile.LoginPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:XAUMobile.Controls"
+    xmlns:local="clr-namespace:XAUMobile"
+    Shell.NavBarIsVisible="false"
+    Shell.TabBarIsVisible="False">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <WebView
+                x:Name="webView"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand" />
+            <!--  Disabled due to crashing Navigated="OnWebViewNavigated"  -->
+
+            <Button
+                AbsoluteLayout.LayoutBounds="0.5,0.95,-1,-1"
+                AbsoluteLayout.LayoutFlags="PositionProportional"
+                BackgroundColor="Transparent"
+                Clicked="OnInjectScriptClicked"
+                Text="{local:Translate LoginPageProblemButton}"
+                TextColor="{DynamicResource Primary}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

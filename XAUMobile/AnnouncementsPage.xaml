@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XAUMobile.AnnouncementsPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:XAUMobile"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    Shell.NavBarIsVisible="true"
+    Shell.TabBarIsVisible="false">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="10">
+
+            <!--  Latest Announcement  -->
+            <Frame
+                Margin="0,5,0,0"
+                Padding="20"
+                BackgroundColor="Transparent"
+                BorderColor="{DynamicResource Primary}"
+                CornerRadius="0">
+                <StackLayout>
+                    <Label
+                        x:Name="LatestTitleLabel"
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        HorizontalOptions="Center"
+                        TextColor="{DynamicResource Primary}" />
+                    <Label
+                        x:Name="LatestBodyLabel"
+                        Margin="0,10,0,0"
+                        FontSize="14"
+                        HorizontalOptions="Center"
+                        TextColor="{DynamicResource Secondary}" />
+                </StackLayout>
+            </Frame>
+
+            <!--  Expander for Previous Announcements  -->
+            <toolkit:Expander>
+                <toolkit:Expander.Header>
+                    <Label
+                        Margin="0,20,0,10"
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        HorizontalOptions="Center"
+                        Text="Tap to view previous announcements"
+                        TextColor="{DynamicResource Primary}" />
+                </toolkit:Expander.Header>
+
+                <!--  Previous Announcements  -->
+                <VerticalStackLayout x:Name="PreviousAnnouncementsStack" Padding="10" />
+            </toolkit:Expander>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

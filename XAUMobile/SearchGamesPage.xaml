@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XAUMobile.SearchGamesPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:XAUMobile.Controls"
+    xmlns:local="clr-namespace:XAUMobile"
+    Title=""
+    Shell.NavBarIsVisible="true">
+
+    <AbsoluteLayout>
+
+        <StackLayout
+            Padding="10"
+            AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+            AbsoluteLayout.LayoutFlags="All"
+            Spacing="5">
+            <Label
+                x:Name="SearchTitleLabel"
+                FontSize="14"
+                HorizontalTextAlignment="Center"
+                IsVisible="True"
+                Text="{local:Translate SearchByGameName}"
+                TextColor="{DynamicResource Primary}" />
+            <Label
+                x:Name="CopyInstructionLabel"
+                HorizontalTextAlignment="Center"
+                IsVisible="False"
+                Text="{local:Translate SearchCopyToClipboard}"
+                TextColor="{DynamicResource Primary}" />
+
+            <ListView
+                x:Name="GameNamesListView"
+                HasUnevenRows="True"
+                ItemSelected="OnGameLinkSelected"
+                SeparatorVisibility="Default">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <Label
+                                    Grid.Column="0"
+                                    FontSize="14"
+                                    LineBreakMode="WordWrap"
+                                    Text="{Binding Name}"
+                                    TextColor="{DynamicResource Secondary}"
+                                    VerticalOptions="Center" />
+                                <Label
+                                    Grid.Column="1"
+                                    Margin="5,0,0,0"
+                                    FontSize="12"
+                                    HorizontalOptions="End"
+                                    Text="{Binding TitleId}"
+                                    TextColor="{StaticResource Primary}"
+                                    VerticalOptions="Center" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <StackLayout Padding="10" Spacing="10">
+                <Entry x:Name="SearchEntry" Placeholder="{local:Translate EnterGameName}" />
+                <Button
+                    x:Name="SearchButton"
+                    BackgroundColor="{DynamicResource Primary}"
+                    Clicked="OnSearchButtonClicked"
+                    Text="{local:Translate TabBarSearch}"
+                    TextColor="White" />
+                <Label FontSize="12" HorizontalTextAlignment="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Game Data Provided By " TextColor="White" />
+                            <Span Text="IGDB" TextColor="{DynamicResource Primary}" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+        </StackLayout>
+
+        <ActivityIndicator
+            x:Name="GameSearchIndicator"
+            AbsoluteLayout.LayoutBounds="0.5, 0.5, AutoSize, AutoSize"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            IsRunning="False"
+            IsVisible="False"
+            Color="{DynamicResource Primary}" />
+
+        <controls:CallToAction
+            x:Name="CallToActionControl"
+            AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+            AbsoluteLayout.LayoutFlags="All" />
+    </AbsoluteLayout>
+</ContentPage>

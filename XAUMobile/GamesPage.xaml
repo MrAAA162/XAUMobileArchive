@@ -1,0 +1,238 @@
+﻿<ContentPage
+    x:Class="XAUMobile.GamesPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:XAUMobile.Controls"
+    xmlns:local="clr-namespace:XAUMobile"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    Shell.NavBarIsVisible="false">
+
+    <AbsoluteLayout>
+        <StackLayout
+            Padding="10"
+            AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+            AbsoluteLayout.LayoutFlags="All"
+            Spacing="10">
+
+            <!--  Filter and Total Games Section  -->
+            <StackLayout Orientation="Horizontal">
+
+                <ImageButton
+                    x:Name="ToggleSearchButton"
+                    Margin="0,0,10,0"
+                    Clicked="OnToggleSearchClicked"
+                    HeightRequest="24"
+                    HorizontalOptions="Start"
+                    Source="search50.png"
+                    WidthRequest="24" />
+
+                <ImageButton
+                    x:Name="FilterMenuButton"
+                    Margin="0,0,10,0"
+                    Clicked="OnFilterMenuButtonClicked"
+                    HeightRequest="25"
+                    HorizontalOptions="Start"
+                    Source="filter50.png"
+                    WidthRequest="25" />
+
+                <ImageButton
+                    x:Name="ExportCsvButton"
+                    Margin="0,0,10,0"
+                    Clicked="OnExportCsvClicked"
+                    HeightRequest="25"
+                    HorizontalOptions="Start"
+                    IsEnabled="false"
+                    Source="exportcsv50.png"
+                    WidthRequest="25" />
+
+                <ImageButton
+                    x:Name="LoadManualAchievements"
+                    Margin="0,0,10,0"
+                    Clicked="OnManualAchievementsClicked"
+                    HeightRequest="25"
+                    HorizontalOptions="Start"
+                    IsVisible="True"
+                    Source="trophy48.png"
+                    WidthRequest="25" />
+
+                <Label
+                    x:Name="labelTotalGames"
+                    FontSize="Small"
+                    HorizontalOptions="EndAndExpand"
+                    Text="{local:Translate TotalGames}"
+                    TextColor="{DynamicResource Primary}"
+                    VerticalOptions="Center" />
+            </StackLayout>
+
+            <!--  Search Section  -->
+            <SearchBar
+                x:Name="GameSearchBar"
+                Margin="0,0,0,0"
+                CancelButtonColor="{DynamicResource Primary}"
+                FontSize="Small"
+                HeightRequest="40"
+                IsVisible="false"
+                Placeholder="{local:Translate GamesSearchPlaceholder}"
+                TextChanged="OnSearchTextChanged"
+                WidthRequest="300" />
+
+            <Label
+                x:Name="noGamesLabel"
+                FontSize="Medium"
+                HorizontalOptions="Center"
+                IsVisible="False"
+                Text="{local:Translate GamesSearchNoGamesFound}"
+                TextColor="{DynamicResource Primary}"
+                VerticalOptions="Center" />
+
+            <!--  Games listview Section  -->
+            <ListView
+                x:Name="gamesListView"
+                Margin="4,0"
+                BackgroundColor="Transparent"
+                HasUnevenRows="True"
+                ItemSelected="OnGameItemSelected"
+                ItemsSource="{Binding Games}"
+                SelectionMode="Single"
+                SeparatorVisibility="None"
+                VerticalOptions="FillAndExpand">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <SwipeView>
+                                <SwipeView.LeftItems>
+                                    <SwipeItems>
+                                        <SwipeItem
+                                            BackgroundColor="{DynamicResource Primary}"
+                                            CommandParameter="{Binding Id}"
+                                            IconImageSource="copy48.png"
+                                            Invoked="OnCopyTitleIdSwipeInvoked" />
+                                    </SwipeItems>
+                                </SwipeView.LeftItems>
+
+                                <Frame
+                                    Margin="2,4"
+                                    Padding="8"
+                                    BackgroundColor="{DynamicResource CardBg}"
+                                    BorderColor="Transparent"
+                                    CornerRadius="8"
+                                    HasShadow="True">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="60" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <!--  Game Image  -->
+                                        <Image
+                                            Grid.Column="0"
+                                            Aspect="AspectFill"
+                                            HeightRequest="60"
+                                            Source="{Binding DisplayImage}"
+                                            VerticalOptions="Start"
+                                            WidthRequest="60" />
+
+                                        <!--  Game Details  -->
+                                        <Grid Grid.Column="1" Margin="10,0,0,0">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="Auto" />
+                                            </Grid.RowDefinitions>
+
+                                            <!--  Game Name  -->
+                                            <Label
+                                                Grid.Row="0"
+                                                FontAttributes="Bold"
+                                                FontSize="Small"
+                                                LineBreakMode="TailTruncation"
+                                                Text="{Binding Name}"
+                                                TextColor="{DynamicResource Primary}" />
+
+                                            <!--  Stats Row  -->
+                                            <StackLayout
+                                                Grid.Row="1"
+                                                Margin="0,4,0,0"
+                                                Orientation="Horizontal"
+                                                Spacing="16">
+                                                <!--  Achievements  -->
+                                                <StackLayout Orientation="Horizontal" Spacing="4">
+                                                    <Image
+                                                        HeightRequest="16"
+                                                        Source="trophy.png"
+                                                        VerticalOptions="Center"
+                                                        WidthRequest="16" />
+                                                    <Label
+                                                        FontSize="Small"
+                                                        Text="{Binding CurrentAchievements}"
+                                                        TextColor="{StaticResource Secondary}"
+                                                        VerticalOptions="Center" />
+                                                </StackLayout>
+
+                                                <!--  Gamerscore  -->
+                                                <StackLayout Orientation="Horizontal" Spacing="4">
+                                                    <Image
+                                                        HeightRequest="16"
+                                                        Source="gs.png"
+                                                        VerticalOptions="Center"
+                                                        WidthRequest="16" />
+                                                    <Label
+                                                        FontSize="Small"
+                                                        Text="{Binding GamerscoreCombined}"
+                                                        TextColor="{StaticResource Secondary}"
+                                                        VerticalOptions="Center" />
+                                                </StackLayout>
+                                            </StackLayout>
+                                            <!--  Progress Bar  -->
+                                            <ProgressBar
+                                                Grid.Row="2"
+                                                Margin="0,8,0,4"
+                                                BackgroundColor="{DynamicResource CardBg}"
+                                                HeightRequest="4"
+                                                Progress="{Binding ProgressValue}"
+                                                ProgressColor="{DynamicResource Primary}" />
+                                        </Grid>
+                                    </Grid>
+                                </Frame>
+                            </SwipeView>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+
+                <!--  clean up these buttons or replace with a better/modern way (swipe pages?)  -->
+                <Button
+                    Margin="5"
+                    BackgroundColor="{DynamicResource Primary}"
+                    Clicked="OnPreviousPageClicked"
+                    ImageSource="previousic.png" />
+                <Button
+                    Margin="5"
+                    BackgroundColor="{DynamicResource Primary}"
+                    Clicked="OnRefreshPageClicked"
+                    ImageSource="refreshic.png" />
+                <Button
+                    Margin="5"
+                    BackgroundColor="{DynamicResource Primary}"
+                    Clicked="OnNextPageClicked"
+                    ImageSource="nextic.png" />
+            </StackLayout>
+        </StackLayout>
+
+        <ActivityIndicator
+            x:Name="GamesIndicator"
+            AbsoluteLayout.LayoutBounds="0.5, 0.5, AutoSize, AutoSize"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            IsRunning="false"
+            IsVisible="false"
+            Color="{DynamicResource Primary}" />
+
+        <controls:CallToAction
+            x:Name="CallToActionControl"
+            AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+            AbsoluteLayout.LayoutFlags="All"
+            IsVisible="False" />
+    </AbsoluteLayout>
+</ContentPage>

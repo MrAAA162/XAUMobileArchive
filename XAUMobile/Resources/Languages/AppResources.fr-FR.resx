@@ -1,0 +1,790 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Accept" xml:space="preserve">
+    <value>Accepter</value>
+    <comment>Accept</comment>
+  </data>
+  <data name="AppSettings" xml:space="preserve">
+    <value>Paramètres de l’application</value>
+    <comment>App Settings</comment>
+  </data>
+  <data name="ThemeLanguageSettings" xml:space="preserve">
+    <value>Paramètres de thème et de langue</value>
+    <comment>Theme &amp; Language Settings</comment>
+  </data>
+  <data name="ChangeThemeColor" xml:space="preserve">
+    <value>Changer la couleur du thème</value>
+    <comment>Change Theme Color</comment>
+  </data>
+  <data name="SelectedColor" xml:space="preserve">
+    <value>Couleur sélectionnée</value>
+    <comment>Selected Color</comment>
+  </data>
+  <data name="NightMode" xml:space="preserve">
+    <value>Mode nuit</value>
+    <comment>Night Mode</comment>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Langue</value>
+    <comment>Language</comment>
+  </data>
+  <data name="SignatureSettings" xml:space="preserve">
+    <value>Paramètres de signature</value>
+    <comment>Signature Settings</comment>
+  </data>
+  <data name="EnableSignature" xml:space="preserve">
+    <value>Activer la signature</value>
+    <comment>Enable Signature</comment>
+  </data>
+  <data name="ResetSignatureDefault" xml:space="preserve">
+    <value>Réinitialiser la signature par défaut</value>
+    <comment>Reset Signature to Default</comment>
+  </data>
+  <data name="CheckForUpdate" xml:space="preserve">
+    <value>Vérifier la mise à jour</value>
+    <comment>Check for Update</comment>
+  </data>
+  <data name="ResetSettings" xml:space="preserve">
+    <value>Réinitialiser les paramètres</value>
+    <comment>Reset Settings</comment>
+  </data>
+  <data name="DownloadingUpdate" xml:space="preserve">
+    <value>Téléchargement de la mise à jour... Veuillez patienter.</value>
+    <comment>Downloading Update... Please Wait.</comment>
+  </data>
+  <data name="EnterCustomSignature" xml:space="preserve">
+    <value>Entrez la signature personnalisée ici</value>
+    <comment>Enter custom signature here</comment>
+  </data>
+  <data name="SelectLanguage" xml:space="preserve">
+    <value>Sélectionner une langue</value>
+    <comment>Select Language</comment>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Version</value>
+    <comment>Version</comment>
+  </data>
+  <data name="Downloading" xml:space="preserve">
+    <value>Téléchargement</value>
+    <comment>Downloading</comment>
+  </data>
+  <data name="DownloadingPrompt" xml:space="preserve">
+    <value>Veuillez patienter jusqu'à ce que vous obteniez l'invite d'installation</value>
+    <comment>Please wait until you get the install prompt.</comment>
+  </data>
+  <data name="UpdateCheck" xml:space="preserve">
+    <value>Vérification de la mise à jour</value>
+    <comment>Update Check</comment>
+  </data>
+  <data name="UpdateCheckAlreadyUpToDate" xml:space="preserve">
+    <value>est déjà à jour</value>
+    <comment>is already up to date.</comment>
+  </data>
+  <data name="UpdateAvailable" xml:space="preserve">
+    <value>Mise à jour disponible</value>
+    <comment>Update Available</comment>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Mise à jour</value>
+    <comment>Update</comment>
+  </data>
+  <data name="Later" xml:space="preserve">
+    <value>Plus tard</value>
+    <comment>Later</comment>
+  </data>
+  <data name="UpdateMessage" xml:space="preserve">
+    <value>Une nouvelle version ({0}) est disponible!\nChangelog:\n{1}\NVous souhaitez mettre à jour maintenant ?</value>
+    <comment>A new version ({0}) is available!\n\nChangelog:\n{1}\n\nWould you like to update now?</comment>
+  </data>
+  <data name="WelcomePageFollowingTerms" xml:space="preserve">
+    <value>En utilisant cette application, vous acceptez les conditions suivantes :</value>
+    <comment>By using this app, you agree to the following terms:</comment>
+  </data>
+  <data name="WelcomePageTerms1" xml:space="preserve">
+    <value>1. Cette application est gratuite et vous n'avez pas payé quelqu'un pour l'obtenir.</value>
+    <comment>1. This app is free and you did not pay someone for it.</comment>
+  </data>
+  <data name="WelcomePageTerms2" xml:space="preserve">
+    <value>2. Vous ne rejoindrez pas le Discord pour poser des questions stupides.</value>
+    <comment>2. You will not join the Discord and ask stupid questions.</comment>
+  </data>
+  <data name="WelcomePageTerms3" xml:space="preserve">
+    <value>3. Ne partagez PAS votre jeton Xbox avec qui que ce soit ! Considérez-le comme un mot de passe pour votre compte.</value>
+    <comment>3. Do NOT share your Xbox token with anyone! Treat it like a password for your account.</comment>
+  </data>
+  <data name="WelcomePageTerms4" xml:space="preserve">
+    <value>4. Vous comprenez les risques liés à l'utilisation de l'application XAU Mobile.</value>
+    <comment>4. You understand the risks that come with using the XAU Mobile application.</comment>
+  </data>
+  <data name="WelcomePageTerms5" xml:space="preserve">
+    <value>5. Le déblocage de succès ou l'usurpation de jeux à l'aide de cette application peut constituer une violation des conditions d'utilisation de Xbox/Microsoft. Nous ne sommes pas responsables des sanctions ou interdictions qui pourraient en résulter.</value>
+    <comment>5. Unlocking achievements or spoofing games using this app may violate Xbox/Microsoft terms of service. We are not responsible for any penalties or bans that may occur as a result.</comment>
+  </data>
+  <data name="WelcomePageTerms6" xml:space="preserve">
+    <value>6. Vous acceptez que le développeur de cette application ait averti votre stupide cul et qu'il ne soit pas responsable de quoi que ce soit.</value>
+    <comment>6. You agree that the developer of this app has warned your stupid ass and they are not responsible for anything.</comment>
+  </data>
+  <data name="WelcomePageAgreeToc" xml:space="preserve">
+    <value>J'accepte les conditions générales d'utilisation</value>
+    <comment>I agree to the Terms and Conditions</comment>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Erreur</value>
+    <comment>Error</comment>
+  </data>
+  <data name="XauthNotSet" xml:space="preserve">
+    <value>Vous n'avez pas mis votre token d'authentification Xbox. Vous pouvez utiliser le bouton Xbox Login ou coller manuellement votre Token si vous l'avez.</value>
+    <comment>You did not put your Xbox Authentication Token. You can use the Xbox Login button or manually paste your Token if you have it.</comment>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Connexion</value>
+    <comment>Login</comment>
+  </data>
+  <data name="XboxLogin" xml:space="preserve">
+    <value>Connexion Xbox</value>
+    <comment>Xbox Login</comment>
+  </data>
+  <data name="MainPagePromptForLoginPage" xml:space="preserve">
+    <value>Connectez-vous... Une fois que vous avez accédé à la page de profil, votre token Xbox devrait s'afficher automatiquement. Si ce n'est pas le cas, cliquez sur le bouton [Problème ? Cliquez pour obtenir le token Xbox] en bas de votre page de profil Xbox.</value>
+    <comment>Let's get you logged in... After you reach the profile page, it should automatically get your Xbox Token.\n\nIf it does not, press on the [Problem? Click to Get Xbox Token] button on the bottom of your Xbox profile page.</comment>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>Continuer</value>
+    <comment>Continue</comment>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Annuler</value>
+    <comment>Cancel</comment>
+  </data>
+  <data name="PrivacyMode" xml:space="preserve">
+    <value>Mode vie privée</value>
+    <comment>Privacy Mode</comment>
+  </data>
+  <data name="EnterApp" xml:space="preserve">
+    <value>Entrer dans l'application</value>
+    <comment>Enter App</comment>
+  </data>
+  <data name="SpoofingWarning" xml:space="preserve">
+    <value>AVERTISSEMENT : Le spoofing ne fonctionne pas avec Xbox Login. Vous devrez récupérer le jeton sur le PC à l'aide de XAU et l'ajouter manuellement</value>
+    <comment>WARNING: Spoofing does not work with Xbox Login. You will need to grab the token from PC using XAU and manually add it</comment>
+  </data>
+  <data name="LoginWithXbox" xml:space="preserve">
+    <value>Se connecter avec Xbox</value>
+    <comment>Login with Xbox</comment>
+  </data>
+  <data name="OR" xml:space="preserve">
+    <value>Ou</value>
+    <comment>Or</comment>
+  </data>
+  <data name="EnterXauthHere" xml:space="preserve">
+    <value>Entrer le jeton Xbox ici</value>
+    <comment>Enter Xbox Token Here</comment>
+  </data>
+  <data name="EnterXauthManually" xml:space="preserve">
+    <value>Saisir manuellement le jeton</value>
+    <comment>Enter Token Manually</comment>
+  </data>
+  <data name="XboxToken" xml:space="preserve">
+    <value>Jeton Xbox</value>
+    <comment>Xbox Token</comment>
+  </data>
+  <data name="MainPageWarning" xml:space="preserve">
+    <value>CETTE APPLICATION EST ENCORE EN BETA. VEUILLEZ SIGNALER TOUT PROBLÈME DANS LE DISCORD. Mettez votre Token Xbox avant de naviguer vers d'autres pages. L'application ne fonctionnera pas sans votre token Xbox.</value>
+    <comment>THIS APP IS STILL IN BETA. PLEASE REPORT ANY ISSUES IN THE DISCORD. Put your Xbox Token before navigating to other pages. The App will not function without your Xbox Token.</comment>
+  </data>
+  <data name="LoginPageProblemButton" xml:space="preserve">
+    <value>Problème ? Cliquez pour obtenir un jeton Xbox</value>
+    <comment>Problem? Click To Get Xbox Token</comment>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>Succès</value>
+    <comment>Success</comment>
+  </data>
+  <data name="LoginPageFailMessage" xml:space="preserve">
+    <value>Échec de la récupération de votre jeton d'authentification. N'appuyez sur le bouton qu'après avoir accédé à votre page de profil.</value>
+    <comment>Failed to retrieve your Auth Token. Press the button only after you have reached your profile page.</comment>
+  </data>
+  <data name="LoginPageSuccessMessage" xml:space="preserve">
+    <value>Le jeton Xbox a été enregistré avec succès. N'oubliez pas que l'usurpation d'identité ne fonctionne pas pour ce jeton. Vous allez maintenant être redirigé vers la page d'accueil</value>
+    <comment>Xbox Token saved successfully. Remember that spoofing does not work for this token. You will now be redirected to the Home page</comment>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+    <comment>OK</comment>
+  </data>
+  <data name="ToolBarMenuSettings" xml:space="preserve">
+    <value>Paramètres</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="ToolBarMenuAboutXAU" xml:space="preserve">
+    <value>À propos de XAUMobile</value>
+    <comment>About XAUMobile</comment>
+  </data>
+  <data name="ToolBarMenuDiscord" xml:space="preserve">
+    <value>Serveur Discord</value>
+    <comment>Discord Server</comment>
+  </data>
+  <data name="Announcements" xml:space="preserve">
+    <value>Annonces</value>
+    <comment>Announcements</comment>
+  </data>
+  <data name="TabBarHome" xml:space="preserve">
+    <value>Accueil</value>
+    <comment>Home</comment>
+  </data>
+  <data name="TabBarUser" xml:space="preserve">
+    <value>Utilisateur</value>
+    <comment>User</comment>
+  </data>
+  <data name="TabBarGames" xml:space="preserve">
+    <value>Jeux</value>
+    <comment>Games</comment>
+  </data>
+  <data name="TabBarSearch" xml:space="preserve">
+    <value>Recherche</value>
+    <comment>Search</comment>
+  </data>
+  <data name="TabBarMisc" xml:space="preserve">
+    <value>Divers</value>
+    <comment>Misc</comment>
+  </data>
+  <data name="TabTitleSpoofGame" xml:space="preserve">
+    <value>Jeu de l'imitation</value>
+    <comment>Spoof Game</comment>
+  </data>
+  <data name="TabTitleStatsEditor" xml:space="preserve">
+    <value>Éditeur de statistiques</value>
+    <comment>Stats Editor</comment>
+  </data>
+  <data name="SearchTabGame" xml:space="preserve">
+    <value>Jeu</value>
+    <comment>Game</comment>
+  </data>
+  <data name="SearchTabProductId" xml:space="preserve">
+    <value>ID du produit</value>
+    <comment>Product ID</comment>
+  </data>
+  <data name="SearchTabGamertag" xml:space="preserve">
+    <value>Gamertag</value>
+    <comment>Gamertag</comment>
+  </data>
+  <data name="LoginSuccessful" xml:space="preserve">
+    <value>Connexion réussie</value>
+    <comment>Login Successful</comment>
+  </data>
+  <data name="LoginFailed" xml:space="preserve">
+    <value>Échec de la connexion</value>
+    <comment>Login Failed</comment>
+  </data>
+  <data name="UserPageLoginMessageSuccess" xml:space="preserve">
+    <value>Vous pouvez maintenant utiliser l'application. Bonne lecture !</value>
+    <comment>You can now use the app. Enjoy!</comment>
+  </data>
+  <data name="UserPageLoginMessageFail" xml:space="preserve">
+    <value>Vérifiez et mettez à jour votre jeton d'autorisation Xbox</value>
+    <comment>Check and update your Xbox Authorization Token</comment>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Inconnu</value>
+    <comment>Unknown</comment>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>Rafraîchir</value>
+    <comment>Refresh</comment>
+  </data>
+  <data name="UserPageXboxRep" xml:space="preserve">
+    <value>Réputation Xbox</value>
+    <comment>Xbox Reputation</comment>
+  </data>
+  <data name="Device" xml:space="preserve">
+    <value>Dispositif</value>
+    <comment>Device</comment>
+  </data>
+  <data name="UserPagePresenceState" xml:space="preserve">
+    <value>État de présence</value>
+    <comment>Presence State</comment>
+  </data>
+  <data name="UserPagePresenceText" xml:space="preserve">
+    <value>Texte de présence</value>
+    <comment>Presence Text</comment>
+  </data>
+  <data name="Gamertag" xml:space="preserve">
+    <value>Gamertag</value>
+    <comment>Gamertag</comment>
+  </data>
+  <data name="Gamerscore" xml:space="preserve">
+    <value>Score de jeu</value>
+    <comment>Gamerscore</comment>
+  </data>
+  <data name="FollowerCount" xml:space="preserve">
+    <value>Nombre de followers</value>
+    <comment>Follower Count</comment>
+  </data>
+  <data name="FollowingCount" xml:space="preserve">
+    <value>Compte à rebours</value>
+    <comment>Following Count</comment>
+  </data>
+  <data name="TotalGames" xml:space="preserve">
+    <value>Total des jeux</value>
+    <comment>Total Games</comment>
+  </data>
+  <data name="NoAchievements" xml:space="preserve">
+    <value>Pas de réalisations</value>
+    <comment>No Achievements</comment>
+  </data>
+  <data name="NoAchievementsMessage" xml:space="preserve">
+    <value>Ce jeu n'a pas de succès</value>
+    <comment>This game has no achievements</comment>
+  </data>
+  <data name="NoGamesToExport" xml:space="preserve">
+    <value>Pas de jeux à exporter.</value>
+    <comment>No games to export.</comment>
+  </data>
+  <data name="GamesExportedSuccessfully" xml:space="preserve">
+    <value>Jeux exportés avec succès</value>
+    <comment>Games Exported Successfully</comment>
+  </data>
+  <data name="FileName" xml:space="preserve">
+    <value>Nom du fichier</value>
+    <comment>File Name</comment>
+  </data>
+  <data name="FailedToExportGames" xml:space="preserve">
+    <value>Échec de l'exportation des jeux</value>
+    <comment>Failed to export games</comment>
+  </data>
+  <data name="TitleIdClipboard" xml:space="preserve">
+    <value>Le titre ID {0} pour {1} a été copié dans le presse-papiers.</value>
+    <comment>The Title ID {0} for {1} was copied to the clipboard.</comment>
+  </data>
+  <data name="GamesSearchPlaceholder" xml:space="preserve">
+    <value>RECHERCHE PAR NOM DE JEU</value>
+    <comment>SEARCH BY GAME NAME</comment>
+  </data>
+  <data name="GamesSearchNoGamesFound" xml:space="preserve">
+    <value>AUCUN JEU TROUVÉ.</value>
+    <comment>NO GAMES FOUND.</comment>
+  </data>
+  <data name="FilterGames" xml:space="preserve">
+    <value>Jeux de filtres</value>
+    <comment>Filter Games</comment>
+  </data>
+  <data name="FilterAllGamesOption" xml:space="preserve">
+    <value>Tous les jeux</value>
+    <comment>All Games</comment>
+  </data>
+  <data name="FilterIncompleteGamesOption" xml:space="preserve">
+    <value>Jeux incomplets</value>
+    <comment>Incomplete Games</comment>
+  </data>
+  <data name="NoAchievementsFound" xml:space="preserve">
+    <value>AUCUNE RÉALISATION TROUVÉE</value>
+    <comment>NO ACHIEVEMENTS FOUND</comment>
+  </data>
+  <data name="UnlockDate" xml:space="preserve">
+    <value>Date de déblocage</value>
+    <comment>Unlock Date</comment>
+  </data>
+  <data name="AchievementAchieved" xml:space="preserve">
+    <value>Atteint</value>
+    <comment>Achieved</comment>
+  </data>
+  <data name="AchievementInProgress" xml:space="preserve">
+    <value>En cours</value>
+    <comment>In Progress</comment>
+  </data>
+  <data name="AchievementNotStarted" xml:space="preserve">
+    <value>Pas commencé</value>
+    <comment>Not Started</comment>
+  </data>
+  <data name="UnsupportedTitle" xml:space="preserve">
+    <value>Titre non supporté</value>
+    <comment>Unsupported Title</comment>
+  </data>
+  <data name="UnsupportedTitleMessage" xml:space="preserve">
+    <value>contient des réalisations basées sur des événements qui ne sont pas prises en charge</value>
+    <comment>contains event-based achievements which are not supported</comment>
+  </data>
+  <data name="AlreadyUnlocked" xml:space="preserve">
+    <value>Déjà débloqué</value>
+    <comment>Already Unlocked</comment>
+  </data>
+  <data name="AlreadyUnlockedMessage" xml:space="preserve">
+    <value>a déjà été déverrouillé et ne peut l'être à nouveau</value>
+    <comment>has already been unlocked and cannot be unlocked again</comment>
+  </data>
+  <data name="UnsupportedAchievement" xml:space="preserve">
+    <value>Non pris en charge</value>
+    <comment>Unsupported</comment>
+  </data>
+  <data name="UnsupportedAchievementMessage" xml:space="preserve">
+    <value>est un succès basé sur des événements et ne peut pas être débloqué</value>
+    <comment>is a event-based achievement and cannot be unlocked</comment>
+  </data>
+  <data name="AchievementConfirmUnlock" xml:space="preserve">
+    <value>Confirmer le déverrouillage</value>
+    <comment>Confirm Unlock</comment>
+  </data>
+  <data name="AchievementConfirmUnlockMessage" xml:space="preserve">
+    <value>Êtes-vous sûr de vouloir déverrouiller</value>
+    <comment>Are you sure you want to unlock</comment>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Oui</value>
+    <comment>Yes</comment>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Non</value>
+    <comment>No</comment>
+  </data>
+  <data name="AchievementUnlocked" xml:space="preserve">
+    <value>Réussite débloquée</value>
+    <comment>Achievement Unlocked</comment>
+  </data>
+  <data name="AchievementUnlockedMessage" xml:space="preserve">
+    <value>a été déverrouillé avec succès</value>
+    <comment>was successfully unlocked</comment>
+  </data>
+  <data name="AchievementFilterAll" xml:space="preserve">
+    <value>Tous</value>
+    <comment>All</comment>
+  </data>
+  <data name="AchievementFilterUnlocked" xml:space="preserve">
+    <value>Débloqué</value>
+    <comment>Unlocked</comment>
+  </data>
+  <data name="AchievementFilterLocked" xml:space="preserve">
+    <value>Verrouillé</value>
+    <comment>Locked</comment>
+  </data>
+  <data name="AchievementFilter" xml:space="preserve">
+    <value>Filtrer les réalisations</value>
+    <comment>Filter Achievements</comment>
+  </data>
+  <data name="SpoofingUserAgent" xml:space="preserve">
+    <value>(Facultatif) Sélectionnez un User-Agent</value>
+    <comment>(Optional) Select a User-Agent. </comment>
+  </data>
+  <data name="EnterValidTitleId" xml:space="preserve">
+    <value>Veuillez saisir un identifiant de titre valide</value>
+    <comment>Please enter a valid Title ID</comment>
+  </data>
+  <data name="FailedFetchTitleId" xml:space="preserve">
+    <value>Échec de la recherche de l'identifiant du titre</value>
+    <comment>Failed to fetch Title ID</comment>
+  </data>
+  <data name="TimePlayed" xml:space="preserve">
+    <value>Temps de jeu</value>
+    <comment>Time Played</comment>
+  </data>
+  <data name="Days" xml:space="preserve">
+    <value>Jours</value>
+    <comment>Days</comment>
+  </data>
+  <data name="Hours" xml:space="preserve">
+    <value>Heures</value>
+    <comment>Hours</comment>
+  </data>
+  <data name="Minutes" xml:space="preserve">
+    <value>Procès-verbal</value>
+    <comment>Minutes</comment>
+  </data>
+  <data name="Seconds" xml:space="preserve">
+    <value>Secondes</value>
+    <comment>Seconds</comment>
+  </data>
+  <data name="And" xml:space="preserve">
+    <value>Et</value>
+    <comment>And</comment>
+  </data>
+  <data name="FailedToSpoofGame" xml:space="preserve">
+    <value>Échec de l'usurpation d'identité</value>
+    <comment>Failed to spoof game</comment>
+  </data>
+  <data name="FailedToSpoofGameMessage" xml:space="preserve">
+    <value>Vous devez utiliser le PC Xbox Token pour usurper l'identité de l'utilisateur</value>
+    <comment>You must use PC Xbox Token to spoof</comment>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Nom</value>
+    <comment>Name</comment>
+  </data>
+  <data name="Title ID" xml:space="preserve">
+    <value>Titre ID</value>
+    <comment>Title ID</comment>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Type</value>
+    <comment>Type</comment>
+  </data>
+  <data name="StartSpoofing" xml:space="preserve">
+    <value>Démarrer l'espionnage</value>
+    <comment>Start Spoofing</comment>
+  </data>
+  <data name="StopSpoofing" xml:space="preserve">
+    <value>Stop Spoofing</value>
+    <comment>Stop Spoofing</comment>
+  </data>
+  <data name="BetaWarning" xml:space="preserve">
+    <value>Cette page est encore en version bêta. Si vous rencontrez des problèmes, veuillez les signaler dans le Discord</value>
+    <comment>This page is still in beta. If you experience any issues, please report it in the Discord</comment>
+  </data>
+  <data name="UpdateGameStats" xml:space="preserve">
+    <value>Mise à jour des statistiques de jeu</value>
+    <comment>Update Game Stats</comment>
+  </data>
+  <data name="TitleBasedGamesOnly" xml:space="preserve">
+    <value>Jeux basés sur des titres uniquement</value>
+    <comment>Title-Based Games Only</comment>
+  </data>
+  <data name="LoadStats" xml:space="preserve">
+    <value>Stats de charge</value>
+    <comment>Load Stats</comment>
+  </data>
+  <data name="SelectedStat" xml:space="preserve">
+    <value>Statistiques sélectionnées</value>
+    <comment>Selected Stat</comment>
+  </data>
+  <data name="EnterNewValue" xml:space="preserve">
+    <value>Saisir une nouvelle valeur</value>
+    <comment>Enter New Value</comment>
+  </data>
+  <data name="TitleID" xml:space="preserve">
+    <value>Titre ID</value>
+    <comment>Title ID</comment>
+  </data>
+  <data name="UpdateStats" xml:space="preserve">
+    <value>Mise à jour des statistiques</value>
+    <comment>Update Stats</comment>
+  </data>
+  <data name="NotLocalized" xml:space="preserve">
+    <value>Certaines parties de cette page peuvent encore être en anglais uniquement.</value>
+    <comment>Some parts of this page may still be in English only.</comment>
+  </data>
+  <data name="SearchByGameName" xml:space="preserve">
+    <value>Recherche par nom de jeu</value>
+    <comment>Search by Game Name</comment>
+  </data>
+  <data name="SearchCopyToClipboard" xml:space="preserve">
+    <value>Cliquez sur Jeu pour copier l'identifiant du titre dans le presse-papiers</value>
+    <comment>Click on Game to Copy Title ID to Clipboard</comment>
+  </data>
+  <data name="EnterGameName" xml:space="preserve">
+    <value>Entrer le nom du jeu</value>
+    <comment>Enter Game Name</comment>
+  </data>
+  <data name="SearchEnterValidGameName" xml:space="preserve">
+    <value>Veuillez saisir un nom de jeu valide</value>
+    <comment>Please enter a valid game name</comment>
+  </data>
+  <data name="UpgradeRequired" xml:space="preserve">
+    <value>Mise à niveau requise</value>
+    <comment>Upgrade Required</comment>
+  </data>
+  <data name="UpgradeRequiredMessage" xml:space="preserve">
+    <value>Une version plus récente de XAUMobile est nécessaire pour utiliser la fonction de recherche. Veuillez mettre à jour pour continuer</value>
+    <comment>A newer version of XAUMobile is required to use the search function. Please update to continue</comment>
+  </data>
+  <data name="RateLimitMessage" xml:space="preserve">
+    <value>Vous avez atteint la limite de taux. Réessayez plus tard</value>
+    <comment>You have reached the rate limit. Try again later</comment>
+  </data>
+  <data name="SearchNoGamesFound" xml:space="preserve">
+    <value>Aucun jeu trouvé</value>
+    <comment>No Games Found</comment>
+  </data>
+  <data name="SearchNoGamesFoundMessage" xml:space="preserve">
+    <value>Aucun jeu ne correspond à votre recherche. Veuillez vérifier votre orthographe. Si le jeu n'est pas dans notre base de données, vous pouvez utiliser la recherche par ID de produit pour ajouter automatiquement le jeu</value>
+    <comment>No games were found matching your search. Please check your spelling. If the game is not in our database, you can use the Product ID search to automatically add the game</comment>
+  </data>
+  <data name="CopiedToClipboard" xml:space="preserve">
+    <value>Copié dans le presse-papiers</value>
+    <comment>Copied to Clipboard</comment>
+  </data>
+  <data name="CopiedToClipboardMessage" xml:space="preserve">
+    <value>a été copié dans votre presse-papiers</value>
+    <comment>has been copied to your clipboard</comment>
+  </data>
+  <data name="SearchProductEnterValidProductId" xml:space="preserve">
+    <value>Veuillez saisir un lien ou un identifiant de produit valide</value>
+    <comment>Please enter a valid link or product ID</comment>
+  </data>
+  <data name="SearchProductError" xml:space="preserve">
+    <value>Impossible de récupérer l'identifiant du titre Xbox</value>
+    <comment>Unable to retrieve Xbox Title ID</comment>
+  </data>
+  <data name="Copied" xml:space="preserve">
+    <value>Copié</value>
+    <comment>Copied</comment>
+  </data>
+  <data name="SearchProductConvertMessage" xml:space="preserve">
+    <value>Convertir l'ID du produit en ID du titre de la Xbox</value>
+    <comment>Convert Product ID to Xbox Title ID</comment>
+  </data>
+  <data name="ProductIdExamples" xml:space="preserve">
+    <value>Exemples d'identification de produits</value>
+    <comment>Product ID Examples</comment>
+  </data>
+  <data name="EnterProductIdorLink" xml:space="preserve">
+    <value>Entrer l'ID du produit / lien Xbox ou Microsoft Store</value>
+    <comment>Enter Product ID / Xbox or Microsoft Store link</comment>
+  </data>
+  <data name="GetTitleId" xml:space="preserve">
+    <value>Obtenir l'ID du titre</value>
+    <comment>Get Title ID</comment>
+  </data>
+  <data name="Beta" xml:space="preserve">
+    <value>Bêta</value>
+    <comment>Beta</comment>
+  </data>
+  <data name="BetaFeature" xml:space="preserve">
+    <value>Il s'agit d'une fonction bêta. Il se peut qu'elle soit incomplète ou que vous rencontriez des erreurs.</value>
+    <comment>This is a beta feature. It may be an incomplete feature or you may encounter errors.</comment>
+  </data>
+  <data name="LoadManualAchievementsWarning" xml:space="preserve">
+    <value>Cette option n'usurpe pas le jeu et ne l'ajoute pas à votre liste de jeux Xbox. Elle charge uniquement les réalisations du jeu</value>
+    <comment>This option does not spoof or add the game to your Xbox game list. It will only load the achievements for the game</comment>
+  </data>
+  <data name="LoadAchievements" xml:space="preserve">
+    <value>Charger les réalisations</value>
+    <comment>Load Achievements</comment>
+  </data>
+  <data name="EnterTitleID" xml:space="preserve">
+    <value>Saisir l'identifiant du titre</value>
+    <comment>Enter Title ID</comment>
+  </data>
+  <data name="FailedToLoadStats" xml:space="preserve">
+    <value>Échec du chargement des statistiques. Le TitleID est peut-être erroné ou le jeu n'a pas de statistiques.</value>
+    <comment>Failed to load stats. The TitleID may be wrong or the game has no stats</comment>
+  </data>
+  <data name="NoStatsSelected" xml:space="preserve">
+    <value>Pas d'état sélectionné ou pas de valeur introduite</value>
+    <comment>No stat selected or no value entered</comment>
+  </data>
+  <data name="StatsUpdateRequestSent" xml:space="preserve">
+    <value>Mise à jour La demande de statistiques a été envoyée à Xbox.</value>
+    <comment>Update Stats request was sent to Xbox.</comment>
+  </data>
+  <data name="EnterValidGamertag" xml:space="preserve">
+    <value>Veuillez saisir un Gamertag valide</value>
+  </data>
+  <data name="FailedGamertagInfo" xml:space="preserve">
+    <value>Échec de la récupération des informations sur le gamertag</value>
+  </data>
+</root>

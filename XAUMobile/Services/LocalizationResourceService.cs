@@ -1,0 +1,27 @@
+﻿using System.ComponentModel;
+using System.Globalization;
+using XAUMobile.Resources.Languages;
+
+namespace XAUMobile
+{
+    public class LocalizationResourceService : INotifyPropertyChanged
+    {
+        private LocalizationResourceService()
+        {
+            AppResources.Culture = CultureInfo.CurrentCulture;
+        }
+
+        public static LocalizationResourceService Instance { get; } = new();
+
+        public object this[string resourceKey]
+            => AppResources.ResourceManager.GetObject(resourceKey, AppResources.Culture) ?? Array.Empty<byte>();
+
+        public event PropertyChangedEventHandler? PropertyChanged = null!;
+
+        public void SetCulture(CultureInfo culture)
+        {
+            AppResources.Culture = culture;
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(null));
+        }
+    }
+}

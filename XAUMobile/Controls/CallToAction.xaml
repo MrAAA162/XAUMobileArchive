@@ -1,0 +1,90 @@
+<ContentView
+    x:Class="XAUMobile.Controls.CallToAction"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Padding="10"
+    BackgroundColor="Transparent"
+    IsVisible="False">
+
+    <Grid>
+        <BoxView
+            x:Name="DimBackground"
+            BackgroundColor="Transparent"
+            HorizontalOptions="FillAndExpand"
+            Opacity="0"
+            VerticalOptions="FillAndExpand"
+            Color="Black" />
+
+        <Frame
+            x:Name="CallToActionFrame"
+            Padding="20"
+            BackgroundColor="{DynamicResource PageBg}"
+            CornerRadius="10"
+            HasShadow="True"
+            HorizontalOptions="Center"
+            IsVisible="False"
+            MinimumHeightRequest="100"
+            VerticalOptions="Center">
+
+            <StackLayout
+                HorizontalOptions="Center"
+                Spacing="20"
+                VerticalOptions="Center">
+
+                <Image
+                    x:Name="ActionIcon"
+                    HeightRequest="50"
+                    HorizontalOptions="Center"
+                    WidthRequest="50" />
+
+                <Label
+                    x:Name="ActionStatus"
+                    FontSize="Large"
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    Text="Status"
+                    TextColor="{DynamicResource Primary}"
+                    VerticalOptions="Center"
+                    VerticalTextAlignment="Center" />
+
+                <Label
+                    x:Name="MessageLabel"
+                    FontSize="Small"
+                    HorizontalOptions="Center"
+                    Text="Action Result"
+                    TextColor="{DynamicResource Secondary}" />
+
+                <Button
+                    x:Name="ActionButton"
+                    BackgroundColor="{DynamicResource Primary}"
+                    Command="{Binding ClosePopupCommand}"
+                    HorizontalOptions="Center"
+                    IsVisible="True"
+                    Text="OK"
+                    TextColor="White" />
+
+                <StackLayout
+                    x:Name="DialogButtonStack"
+                    HorizontalOptions="Center"
+                    IsVisible="False"
+                    Orientation="Horizontal"
+                    Spacing="30">
+                    <Button
+                        x:Name="LeftActionButton"
+                        BackgroundColor="{DynamicResource Primary}"
+                        Command="{Binding LeftButtonCommand}"
+                        HorizontalOptions="Center"
+                        IsVisible="False"
+                        TextColor="White" />
+                    <Button
+                        x:Name="RightActionButton"
+                        BackgroundColor="{DynamicResource Primary}"
+                        Command="{Binding RightButtonCommand}"
+                        HorizontalOptions="Center"
+                        IsVisible="False"
+                        TextColor="White" />
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+    </Grid>
+</ContentView>

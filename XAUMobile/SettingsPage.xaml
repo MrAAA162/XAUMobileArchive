@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XAUMobile.SettingsPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:XAUMobile.Controls"
+    xmlns:local="clr-namespace:XAUMobile"
+    Shell.NavBarIsVisible="true"
+    Shell.TabBarIsVisible="false">
+
+    <AbsoluteLayout>
+
+        <ScrollView
+            Padding="20"
+            AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+            AbsoluteLayout.LayoutFlags="All">
+            <StackLayout Spacing="10">
+                <!--  General Info Section  -->
+                <Frame
+                    Margin="2,4"
+                    Padding="16"
+                    BackgroundColor="{DynamicResource CardBg}"
+                    BorderColor="Transparent"
+                    CornerRadius="8"
+                    HasShadow="True">
+                    <StackLayout Spacing="10">
+                        <Label
+                            FontSize="16"
+                            HorizontalOptions="Center"
+                            Text="{local:Translate AppSettings}"
+                            TextColor="{DynamicResource Primary}" />
+
+                        <Label
+                            x:Name="VersionLabel"
+                            FontSize="12"
+                            HorizontalOptions="Center"
+                            Text="XAUMobile {version}"
+                            TextColor="{DynamicResource Primary}" />
+                    </StackLayout>
+                </Frame>
+
+                <Frame
+                    Margin="2,4"
+                    Padding="16"
+                    BackgroundColor="{DynamicResource CardBg}"
+                    BorderColor="Transparent"
+                    CornerRadius="8"
+                    HasShadow="True">
+                    <StackLayout Spacing="10">
+                        <Label
+                            FontSize="14"
+                            Text="{local:Translate ThemeLanguageSettings}"
+                            TextColor="{DynamicResource Primary}" />
+                        <Label
+                            x:Name="ActiveThemeLabel"
+                            FontSize="12"
+                            TextColor="{DynamicResource Primary}" />
+                        <Picker x:Name="PrimaryColorPicker" Title="{local:Translate ChangeThemeColor}" />
+                        <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+                            <Label Text="{local:Translate NightMode}" VerticalOptions="Center" />
+                            <Switch
+                                x:Name="ThemeSwitch"
+                                IsEnabled="true"
+                                IsToggled="False"
+                                OnColor="{DynamicResource Primary}"
+                                Toggled="ThemeSwitch_Toggled" />
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+                            <Label Text="{local:Translate Language}" VerticalOptions="Center" />
+                            <Picker
+                                x:Name="LanguagePicker"
+                                Title="{local:Translate SelectLanguage}"
+                                MinimumWidthRequest="200"
+                                SelectedIndexChanged="OnLanguageSelected" />
+                        </HorizontalStackLayout>
+                        <Label
+                            FontSize="10"
+                            Text="All Translations are done by the XAU Community ❤️"
+                            TextColor="{DynamicResource Primary}" />
+                    </StackLayout>
+                </Frame>
+
+                <!--  Signature Settings Section  -->
+                <Frame
+                    Margin="2,4"
+                    Padding="16"
+                    BackgroundColor="{DynamicResource CardBg}"
+                    BorderColor="Transparent"
+                    CornerRadius="8"
+                    HasShadow="True">
+                    <StackLayout Spacing="10">
+                        <Label
+                            FontSize="14"
+                            Text="{local:Translate SignatureSettings}"
+                            TextColor="{DynamicResource Primary}" />
+                        <HorizontalStackLayout>
+                            <Label Text="{local:Translate EnableSignature}" VerticalOptions="Center" />
+                            <Switch
+                                x:Name="SignatureSwitch"
+                                HorizontalOptions="Start"
+                                IsToggled="{Binding IsSignatureEnabled}"
+                                VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                        <Entry
+                            x:Name="SignatureEntry"
+                            IsEnabled="{Binding IsSignatureEnabled}"
+                            IsSpellCheckEnabled="False"
+                            Placeholder="{local:Translate EnterCustomSignature}"
+                            Text="{Binding UserSignature}" />
+                        <Button
+                            Margin="0,10,0,0"
+                            BackgroundColor="{DynamicResource Primary}"
+                            Clicked="OnResetSignatureClicked"
+                            Text="{local:Translate ResetSignatureDefault}"
+                            TextColor="white" />
+                    </StackLayout>
+                </Frame>
+
+                <!--  move XAUTH Section here to update xauth token  -->
+
+
+                <!--  Update and Delete Buttons Section  -->
+                <Frame
+                    Margin="2,4"
+                    Padding="16"
+                    BackgroundColor="{DynamicResource CardBg}"
+                    BorderColor="Transparent"
+                    CornerRadius="8"
+                    HasShadow="True">
+                    <StackLayout Spacing="10">
+                        <Label
+                            x:Name="UpdateStatusLabel"
+                            Margin="1"
+                            HorizontalOptions="Center"
+                            IsVisible="false"
+                            Text="{local:Translate DownloadingUpdate}"
+                            TextColor="{DynamicResource Primary}"
+                            VerticalOptions="Center" />
+
+                        <ActivityIndicator
+                            x:Name="LoadingIndicator"
+                            HorizontalOptions="Center"
+                            IsRunning="False"
+                            IsVisible="False"
+                            VerticalOptions="Center"
+                            Color="{DynamicResource Primary}" />
+
+                        <Button
+                            x:Name="CheckForUpdatesButton"
+                            Margin="0,10,0,0"
+                            BackgroundColor="{DynamicResource Primary}"
+                            Clicked="OnCheckForUpdatesClicked"
+                            Text="{local:Translate CheckForUpdate}"
+                            TextColor="white" />
+
+                        <Button
+                            Margin="0,10,0,0"
+                            IsEnabled="False"
+                            Text="{local:Translate ResetSettings}"
+                            TextColor="white" />
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+
+        <controls:CallToAction
+            x:Name="CallToActionControl"
+            AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+            AbsoluteLayout.LayoutFlags="All" />
+    </AbsoluteLayout>
+</ContentPage>

@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XAUMobile.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:XAUMobile.Controls"
+    xmlns:local="clr-namespace:XAUMobile"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    Shell.NavBarIsVisible="true">
+
+    <AbsoluteLayout>
+        <ScrollView AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+            <VerticalStackLayout Padding="20,10" Spacing="10">
+
+                <Image
+                    Margin="0,10,0,0"
+                    Aspect="AspectFit"
+                    HeightRequest="100"
+                    HorizontalOptions="Center"
+                    SemanticProperties.Description="XAU Mobile"
+                    Source="xaumobile2.png" />
+
+                <!--<Label Text="WELCOME TO&#x0a;XAU MOBILE"
+                       TextColor="{DynamicResource Primary}"
+                       Style="{StaticResource Headline}"
+                       HorizontalTextAlignment="Center"
+                       SemanticProperties.HeadingLevel="Level1" />-->
+
+                <Label
+                    Margin="0,5,0,5"
+                    FontSize="12"
+                    HorizontalOptions="CenterAndExpand"
+                    HorizontalTextAlignment="Center"
+                    SemanticProperties.Description="App Info"
+                    Text="{local:Translate MainPageWarning}"
+                    TextColor="White" />
+
+                <VerticalStackLayout Spacing="8" VerticalOptions="CenterAndExpand">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="Small"
+                        HorizontalTextAlignment="Center"
+                        Text="{local:Translate XboxToken}" />
+
+                    <Label
+                        FontSize="12"
+                        HorizontalTextAlignment="Center"
+                        Text="{local:Translate EnterXauthManually}"
+                        TextColor="{DynamicResource Primary}" />
+
+                    <Entry
+                        x:Name="AuthTokenEntry"
+                        Margin="0,5,0,5"
+                        HorizontalTextAlignment="Center"
+                        Placeholder="{local:Translate EnterXauthHere}"
+                        TextChanged="AuthTokenEntry_TextChanged" />
+
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="14"
+                        HorizontalTextAlignment="Center"
+                        Text="{local:Translate OR}"
+                        TextColor="White" />
+
+                    <Label
+                        FontSize="12"
+                        HorizontalTextAlignment="Center"
+                        Text="{local:Translate LoginWithXbox}"
+                        TextColor="{DynamicResource Primary}" />
+
+                    <Button
+                        Margin="0,5,0,5"
+                        BackgroundColor="{DynamicResource Primary}"
+                        Clicked="OnLoginClicked"
+                        HorizontalOptions="Center"
+                        ImageSource="xboxic.png"
+                        Text="{local:Translate XboxLogin}"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand" />
+
+                    <Label
+                        Margin="0,5,0,10"
+                        FontSize="12"
+                        HorizontalTextAlignment="Center"
+                        Text="{local:Translate SpoofingWarning}"
+                        TextColor="{DynamicResource Primary}" />
+                </VerticalStackLayout>
+
+                <HorizontalStackLayout
+                    HorizontalOptions="CenterAndExpand"
+                    Spacing="5"
+                    VerticalOptions="Center">
+                    <Label
+                        Text="{local:Translate PrivacyMode}"
+                        TextColor="White"
+                        VerticalOptions="Center" />
+
+                    <Switch
+                        x:Name="PrivacyToggle"
+                        IsToggled="{Binding Source={x:Reference PrivacyToggle}, Path=IsToggled, Mode=TwoWay}"
+                        OnColor="{DynamicResource Primary}"
+                        Toggled="PrivacyToggle_Toggled" />
+                </HorizontalStackLayout>
+
+                <Button
+                    Margin="0,20,0,10"
+                    BackgroundColor="{DynamicResource Primary}"
+                    Clicked="EnterApp"
+                    HorizontalOptions="Center"
+                    Text="{local:Translate EnterApp}"
+                    TextColor="White" />
+
+                <!--  DEBUG BUTTONS HERE - DISABLE AFTER TESTING  -->
+                <!--<Button Text="Debug Update/Announcements"
+                        BackgroundColor="{DynamicResource Primary}"
+                        TextColor="White"
+                        Clicked="ForceCheckForUpdateBtn"
+                        HorizontalOptions="Center"
+                        Margin="0,20,0,10" />-->
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <controls:CallToAction
+            x:Name="CallToActionControl"
+            AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+            AbsoluteLayout.LayoutFlags="All" />
+    </AbsoluteLayout>
+</ContentPage>

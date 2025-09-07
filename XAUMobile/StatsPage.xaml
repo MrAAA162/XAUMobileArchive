@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XAUMobile.StatsPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:XAUMobile.Controls"
+    xmlns:local="clr-namespace:XAUMobile"
+    Title=""
+    Padding="10"
+    Shell.NavBarIsVisible="true">
+
+    <AbsoluteLayout>
+
+        <ScrollView AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+            <VerticalStackLayout Spacing="10">
+
+                <Label
+                    FontSize="Large"
+                    HorizontalOptions="Center"
+                    Text="{local:Translate UpdateGameStats}"
+                    TextColor="{DynamicResource Primary}"
+                    VerticalOptions="Start" />
+
+                <Label
+                    FontSize="Small"
+                    HorizontalOptions="Center"
+                    Text="{local:Translate TitleBasedGamesOnly}"
+                    TextColor="{DynamicResource Primary}"
+                    VerticalOptions="Start" />
+
+                <!--  Entry for Title ID  -->
+                <Entry
+                    x:Name="TXT_TitleID"
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalTextAlignment="Center"
+                    Placeholder="{local:Translate EnterValidTitleId}"
+                    VerticalTextAlignment="Center"
+                    WidthRequest="350" />
+
+                <!--  Button to Load Stats  -->
+                <Button
+                    x:Name="BTN_LoadStats"
+                    BackgroundColor="{DynamicResource Primary}"
+                    Clicked="LoadStats"
+                    HorizontalOptions="Center"
+                    Text="{local:Translate LoadStats}"
+                    TextColor="White" />
+
+                <!--  ListView for Stats  -->
+                <ListView
+                    x:Name="LST_Stats"
+                    HorizontalOptions="FillAndExpand"
+                    ItemSelected="LST_Stats_SelectedIndexChanged"
+                    ItemsSource="{Binding StatsList}"
+                    SelectionMode="Single"
+                    VerticalOptions="FillAndExpand">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid Padding="10" ColumnDefinitions="*, Auto">
+                                    <!--  Display name of the stat  -->
+                                    <Label
+                                        Grid.Column="0"
+                                        FontSize="Small"
+                                        HorizontalOptions="Start"
+                                        LineBreakMode="TailTruncation"
+                                        Text="{Binding DisplayName}"
+                                        TextColor="{DynamicResource Secondary}"
+                                        VerticalOptions="Center" />
+
+                                    <!--  Value of the stat, aligned to the right  -->
+                                    <Label
+                                        Grid.Column="1"
+                                        Margin="10,0,0,0"
+                                        FontSize="Small"
+                                        HorizontalOptions="End"
+                                        LineBreakMode="TailTruncation"
+                                        Text="{Binding Value}"
+                                        TextColor="{DynamicResource Primary}"
+                                        VerticalOptions="Center" />
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+                <!--  Label for Selected Stat  -->
+                <VerticalStackLayout
+                    x:Name="Write_Stats"
+                    HorizontalOptions="Center"
+                    IsVisible="False">
+                    <!--  Label for Selected Stat  -->
+                    <Label
+                        x:Name="LBL_SelectedStat"
+                        FontSize="Small"
+                        HorizontalOptions="Center"
+                        Text="Selected Stat: None"
+                        TextColor="{DynamicResource Primary}" />
+
+                    <!--  Entry for New Stat Value  -->
+                    <Entry
+                        x:Name="TXT_Stat"
+                        HorizontalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Center"
+                        Placeholder="{local:Translate EnterNewValue}"
+                        VerticalTextAlignment="Center"
+                        WidthRequest="350" />
+
+                    <!--  Button to Write Stats  -->
+                    <Button
+                        x:Name="BTN_WriteStat"
+                        BackgroundColor="{DynamicResource Primary}"
+                        Clicked="WriteStats"
+                        HorizontalOptions="Center"
+                        Text="{local:Translate UpdateStats}"
+                        TextColor="White" />
+                </VerticalStackLayout>
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <controls:CallToAction
+            x:Name="CallToActionControl"
+            AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+            AbsoluteLayout.LayoutFlags="All" />
+    </AbsoluteLayout>
+</ContentPage>

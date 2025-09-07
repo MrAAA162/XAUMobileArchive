@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XAUMobile", "XAUMobile\XAUMobile.csproj", "{05752DC7-F86F-4508-924C-74C4192618BA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{03B1B12F-FAB8-48F3-8560-0609B68131AB}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{05752DC7-F86F-4508-924C-74C4192618BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05752DC7-F86F-4508-924C-74C4192618BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05752DC7-F86F-4508-924C-74C4192618BA}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{05752DC7-F86F-4508-924C-74C4192618BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05752DC7-F86F-4508-924C-74C4192618BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05752DC7-F86F-4508-924C-74C4192618BA}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4FBEDFB2-BA65-4B26-AB56-C6FFDCC9EA4C}
+	EndGlobalSection
+EndGlobal

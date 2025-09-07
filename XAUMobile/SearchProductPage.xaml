@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XAUMobile.SearchProductPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:XAUMobile.Controls"
+    xmlns:local="clr-namespace:XAUMobile"
+    Title=""
+    Shell.NavBarIsVisible="true">
+
+    <AbsoluteLayout>
+
+        <StackLayout
+            Padding="10"
+            AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+            AbsoluteLayout.LayoutFlags="All">
+
+            <Label
+                FontSize="14"
+                HorizontalTextAlignment="Center"
+                Text="{local:Translate SearchProductConvertMessage}"
+                TextColor="{DynamicResource Primary}" />
+
+            <Label
+                FontSize="11"
+                HorizontalTextAlignment="Center"
+                TextColor="{StaticResource Secondary}">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="{local:Translate ProductIdExamples}" />
+                        <Span Text=": bt5p2x999vh2" />
+                        <Span Text="&#10;xbox.com/en-us/games/store/fortnite/bt5p2x999vh2" />
+                        <Span Text="&#10;https://www.microsoft.com/en-us/p/fortnite/bt5p2x999vh2" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Entry x:Name="linkEntry" Placeholder="{local:Translate EnterProductIdorLink}" />
+            <Button
+                x:Name="ProductSearchButton"
+                BackgroundColor="{DynamicResource Primary}"
+                Clicked="OnGetTitleIdClicked"
+                Text="{local:Translate GetTitleId}"
+                TextColor="White" />
+
+            <ListView
+                x:Name="titleIdListView"
+                HasUnevenRows="True"
+                IsVisible="False"
+                ItemTapped="OnTitleTapped"
+                SeparatorVisibility="Default">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="10" Orientation="Vertical">
+                                <Label
+                                    Text="{Binding Name}"
+                                    TextColor="{DynamicResource Primary}"
+                                    VerticalOptions="Start" />
+                                <Label
+                                    Text="{Binding XboxTitleId}"
+                                    TextColor="{StaticResource Secondary}"
+                                    VerticalOptions="EndAndExpand" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Label
+                x:Name="CopyInstructionLabel"
+                HorizontalTextAlignment="Center"
+                IsVisible="False"
+                Text="{local:Translate SearchCopyToClipboard}"
+                TextColor="{DynamicResource Primary}" />
+        </StackLayout>
+
+        <controls:CallToAction
+            x:Name="CallToActionControl"
+            AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+            AbsoluteLayout.LayoutFlags="All" />
+    </AbsoluteLayout>
+</ContentPage>

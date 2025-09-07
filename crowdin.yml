@@ -1,0 +1,3 @@
+files:
+  - source: /XAUMobile/Resources/Languages/AppResources.resx
+    translation: /XAUMobile/Resources/Languages/AppResources.%locale%.resx
